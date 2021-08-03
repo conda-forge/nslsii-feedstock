@@ -12,7 +12,7 @@ source:
     - 0001-import-bluesky_kafka-only-when-needed.patch
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py<37]
 
@@ -30,7 +30,7 @@ requirements:
     - h5py
     - ipython
     - ipywidgets
-    - matplotlib
+    - matplotlib-base
     - numpy
     - ophyd
     - psutil
