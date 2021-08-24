@@ -1,5 +1,5 @@
 {% set name = "nslsii" %}
-{% set version = "0.1.3" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c409688657771291fb2c32e95045d3f44432402ebfb41dae5bc7188c1d34c075
+  sha256: 919e90a3712e6f44e62844e075df8bb602e24b68a1dfb66c0ad7df78b2d9d6b1
   patches:
     - 0001-import-bluesky_kafka-only-when-needed.patch
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py<37]
 
@@ -37,9 +37,9 @@ requirements:
     - pyolog
 
 test:
-  requires:      # [not win]
+  requires:   # [not win]
     - pip        # [not win]
-  commands:      # [not win]
+  commands:   # [not win]
     - pip check  # [not win]
   imports:
     - nslsii
