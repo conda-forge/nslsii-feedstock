@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 919e90a3712e6f44e62844e075df8bb602e24b68a1dfb66c0ad7df78b2d9d6b1
-  patches:
-    - 0001-import-bluesky_kafka-only-when-needed.patch
 
 build:
   number: 0
@@ -57,9 +55,8 @@ test:
     - nslsii.detectors.xspress3
     - nslsii.detectors.zebra
     - nslsii.devices
-    # TODO: uncomment the tests below once https://github.com/NSLS-II/nslsii/pull/125 is merged/released.
-    # - nslsii.iocs.eps_two_state_ioc_sim
-    # - nslsii.iocs.thermo_sim
+    - nslsii.iocs.eps_two_state_ioc_sim
+    - nslsii.iocs.thermo_sim
     - nslsii.temperature_controllers
     - nslsii.transforms
 
