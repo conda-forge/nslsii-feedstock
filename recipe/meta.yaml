@@ -56,7 +56,9 @@ test:
     - nslsii.detectors.zebra
     - nslsii.devices
     - nslsii.iocs.eps_two_state_ioc_sim
-    - nslsii.iocs.thermo_sim
+    # Uncomment the next line once https://github.com/NSLS-II/nslsii/issues/129
+    # is resolved.
+    # - nslsii.iocs.thermo_sim
     - nslsii.temperature_controllers
     - nslsii.transforms
 
@@ -69,5 +71,6 @@ about:
 extra:
   recipe-maintainers:
     - mrakitin
+    - jklynch
     - kbeeperez
     - conda-forge/event-model
