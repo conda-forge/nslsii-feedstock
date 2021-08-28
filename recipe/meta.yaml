@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 20d0d847181dd779e770eeb5048506105ecedcf09cb89bad147e7846102583e7
-  patches:
-    - 0001-import-bluesky_kafka-only-when-needed.patch
 
 build:
   number: 0
