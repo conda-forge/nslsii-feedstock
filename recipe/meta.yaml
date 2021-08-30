@@ -10,7 +10,7 @@ source:
   sha256: 20d0d847181dd779e770eeb5048506105ecedcf09cb89bad147e7846102583e7
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py<37]
 
@@ -55,8 +55,9 @@ test:
     - nslsii.detectors.xspress3
     - nslsii.detectors.zebra
     - nslsii.devices
-    # TODO: uncomment the tests below once https://github.com/NSLS-II/nslsii/pull/125 is merged/released.
-    # - nslsii.iocs.eps_two_state_ioc_sim
+    - nslsii.iocs.eps_two_state_ioc_sim
+    # Uncomment the next line once https://github.com/NSLS-II/nslsii/issues/129
+    # is resolved.
     # - nslsii.iocs.thermo_sim
     - nslsii.temperature_controllers
     - nslsii.transforms
@@ -70,5 +71,6 @@ about:
 extra:
   recipe-maintainers:
     - mrakitin
+    - jklynch
     - kbeeperez
     - conda-forge/event-model

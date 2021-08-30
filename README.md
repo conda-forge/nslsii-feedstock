@@ -191,6 +191,7 @@ Feedstock Maintainers
 =====================
 
 * [@conda-forge/event-model](https://github.com/conda-forge/event-model/)
+* [@jklynch](https://github.com/jklynch/)
 * [@kbeeperez](https://github.com/kbeeperez/)
 * [@mrakitin](https://github.com/mrakitin/)
 
