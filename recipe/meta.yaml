@@ -10,7 +10,7 @@ source:
   sha256: edaa383726518232022630bc155ffadabb3c9227f416b9cb2ef23535142ecd50
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py<37]
 
@@ -33,6 +33,7 @@ requirements:
     - ophyd
     - psutil
     - pyolog
+    - redis-py
 
 test:
   requires:   # [not win]
