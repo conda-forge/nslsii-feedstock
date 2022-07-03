@@ -33,6 +33,7 @@ requirements:
     - ophyd
     - psutil
     - pyolog
+    - redis-py
     - tiled
 
 test:
