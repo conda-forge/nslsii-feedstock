@@ -34,7 +34,7 @@ requirements:
     - psutil
     - pyolog
     - redis-py
-    - tiled-client
+    - tiled
 
 test:
   requires:   # [not win]
