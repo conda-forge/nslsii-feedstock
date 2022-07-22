@@ -1,5 +1,5 @@
 {% set name = "nslsii" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: edaa383726518232022630bc155ffadabb3c9227f416b9cb2ef23535142ecd50
+  sha256: 65f5f681d7dcceb7b73e62890950910ac7e8ddcd8447bc45bdf80af75b4b2cbb
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py<37 or osx]
   ignore_run_exports:
