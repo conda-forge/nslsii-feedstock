@@ -10,7 +10,7 @@ source:
   sha256: 65f5f681d7dcceb7b73e62890950910ac7e8ddcd8447bc45bdf80af75b4b2cbb
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py<37 or osx]
   ignore_run_exports:
