@@ -1,11 +1,11 @@
-About nslsii
-============
+About nslsii-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nslsii-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/NSLS-II/nslsii
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nslsii-feedstock/blob/main/LICENSE.txt)
 
 Summary: Repository of tools used for both data collection and analysis at NSLS-II.
 
