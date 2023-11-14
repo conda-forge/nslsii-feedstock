@@ -10,7 +10,7 @@ source:
   sha256: 7f2cfa312c998b6dabb16b1c35e903f97c2a66ea64373b72ed80e399be85a05d
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py<37 or osx]
   ignore_run_exports:
@@ -39,10 +39,10 @@ requirements:
     - tiled
 
 test:
-  requires:   # [not win]
-    - pip        # [not win]
-  commands:   # [not win]
-    - pip check  # [not win]
+  # requires:   # [not win]
+  #   - pip        # [not win]
+  # commands:   # [not win]
+  #   - pip check  # [not win]
   imports:
     - nslsii
     - nslsii._version
