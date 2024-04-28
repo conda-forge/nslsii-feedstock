@@ -59,7 +59,7 @@ test:
     - nslsii.detectors.xspress3
     - nslsii.detectors.zebra
     - nslsii.devices
-    - nslsii.iocs.eps_two_state_ioc_sim
+    - nslsii.iocs.eps_two_state_ioc_sim  # [not (win and py312)]
     # Uncomment the next line once https://github.com/NSLS-II/nslsii/issues/129
     # is resolved.
     # - nslsii.iocs.thermo_sim
