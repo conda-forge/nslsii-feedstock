@@ -1,5 +1,5 @@
 {% set name = "nslsii" %}
-{% set version = "0.10.1" %}
+{% set version = "0.10.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 50b95b3412693c6526ee6491f011f75dee687c16bf8eafd58e43f6616456ea82
+  sha256: 50a301e3b7b4f092e24af11f11c5ff78f5ad1fc69e00d5c70faad0357c35fa25
 
 build:
   number: 0
