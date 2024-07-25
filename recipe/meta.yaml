@@ -6,15 +6,16 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/nslsii-{{ version }}.tar.gz
   sha256: fc3e836ce70bee8f578881ae2df525349774951edfc0c1b8ab90ee0c4a777e57
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
-  skip: true  # [py<37 or osx]
-  ignore_run_exports:
-    - python_abi
+  entry_points:
+    - sync-experiment = nslsii.sync_experiment:main
+    - what-is-ioc = nslsii.epics_utils:main
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
@@ -23,62 +24,44 @@ requirements:
   run:
     - python
     - appdirs
-    - bluesky
-    - bluesky-kafka  # [not win]
+    - bluesky >=1.8.1
+    - bluesky-kafka >=0.8.0
     - caproto
     - databroker
     - h5py
+    - httpx
     - ipython
     - ipywidgets
+    - ldap3
     - matplotlib-base
+    - msgpack-python >=1.0.0
+    - msgpack-numpy
     - numpy
     - ophyd
     - psutil
+    - pycryptodome
     - pyolog
     - redis-py
-    - tiled
+    - redis-json-dict
 
 test:
-  # requires:   # [not win]
-  #   - pip        # [not win]
-  # commands:   # [not win]
-  #   - pip check  # [not win]
   imports:
     - nslsii
-    - nslsii._version
-    - nslsii.ad33
-    - nslsii.common
-    - nslsii.common.ipynb
-    - nslsii.common.ipynb.animation
-    - nslsii.common.ipynb.info
-    - nslsii.common.ipynb.logutils
-    - nslsii.common.ipynb.nbviewer
-    - nslsii.detectors
-    - nslsii.detectors.trigger_mixins
-    - nslsii.detectors.utils
-    - nslsii.detectors.xspress3
-    - nslsii.detectors.zebra
-    - nslsii.devices
-    # The following error happened for Win/Py312:
-    #   AttributeError: module 'multiprocessing.connection' has no attribute 'CHALLENGE'. Did you mean: '_CHALLENGE'?
-    # Excluding the test for that platform/Python version for now.
-    - nslsii.iocs.eps_two_state_ioc_sim  # [not (win and py==312)]
-    # Uncomment the next line once https://github.com/NSLS-II/nslsii/issues/129
-    # is resolved.
-    # - nslsii.iocs.thermo_sim
-    - nslsii.temperature_controllers
-    - nslsii.transforms
+  commands:
+    - pip check
+    - sync-experiment --help
+    - what-is-ioc --help
+  requires:
+    - pip
 
 about:
-  home: https://github.com/NSLS-II/nslsii
+  summary: Tools for data collection and analysis at NSLS-II
   license: BSD-3-Clause
   license_file: LICENSE
-  summary: Repository of tools used for both data collection and analysis at NSLS-II.
 
 extra:
   recipe-maintainers:
     - gwbischof
     - mrakitin
-    - jklynch
-    - kbeeperez
+    - hyperrealist
     - conda-forge/event-model
