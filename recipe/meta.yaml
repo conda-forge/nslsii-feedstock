@@ -55,6 +55,7 @@ test:
     - pip
 
 about:
+  home: https://github.com/NSLS-II/nslsii
   summary: Tools for data collection and analysis at NSLS-II
   license: BSD-3-Clause
   license_file: LICENSE
