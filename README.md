@@ -7,7 +7,7 @@ Home: https://github.com/NSLS-II/nslsii
 
 Package license: BSD-3-Clause
 
-Summary: Repository of tools used for both data collection and analysis at NSLS-II.
+Summary: Tools for data collection and analysis at NSLS-II
 
 Current build status
 ====================
@@ -213,7 +213,5 @@ Feedstock Maintainers
 
 * [@conda-forge/event-model](https://github.com/orgs/conda-forge/teams/event-model/)
 * [@gwbischof](https://github.com/gwbischof/)
-* [@jklynch](https://github.com/jklynch/)
-* [@kbeeperez](https://github.com/kbeeperez/)
 * [@mrakitin](https://github.com/mrakitin/)
 
