@@ -40,7 +40,7 @@ requirements:
     - msgpack-numpy
     - numpy
     - ophyd
-    - ophyd-async
+    # - ophyd-async
     - packaging
     - pillow
     - psutil
@@ -87,8 +87,8 @@ test:
     - nslsii.kafka_utils
     - nslsii.md_dict
     - nslsii.motors.delta_tau
-    - nslsii.ophyd_async
-    - nslsii.ophyd_async.providers
+    # - nslsii.ophyd_async
+    # - nslsii.ophyd_async.providers
     - nslsii.plans
     - nslsii.plans.maia
     - nslsii.sync_experiment
