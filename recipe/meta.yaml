@@ -6,15 +6,17 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/nslsii-{{ version }}.tar.gz
   sha256: 017195535d5c30dd160319b2fd6e6ebb6c100ff82be8ec15e502432312518c68
 
 build:
+  entry_points:
+    - sync-experiment = nslsii.sync_experiment:main
+    - what-is-ioc = nslsii.epics_utils:main
+    - axis-saver-ioc = nslsii.iocs.caproto_saver:start_axis_ioc
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py<37 or osx]
-  ignore_run_exports:
-    - python_abi
 
 requirements:
   host:
@@ -23,30 +25,38 @@ requirements:
   run:
     - python
     - appdirs
-    - bluesky
-    - bluesky-kafka  # [not win]
+    - bluesky >=1.8.1
+    - bluesky-kafka >=0.8.0
     - caproto
     - databroker
     - h5py
+    - httpx
     - ipython
     - ipywidgets
+    - ldap3
     - matplotlib-base
+    - msgpack-python >=1.0.0
+    - msgpack-numpy
     - numpy
     - ophyd
+    - ophyd-async
+    - packaging
+    - pillow
     - psutil
+    - pycryptodome
     - pyolog
     - redis-py
-    - tiled
+    - redis-json-dict
+    - requests
+    - setuptools
+    - shortuuid
 
 test:
-  # requires:   # [not win]
-  #   - pip        # [not win]
-  # commands:   # [not win]
-  #   - pip check  # [not win]
   imports:
     - nslsii
-    - nslsii._version
     - nslsii.ad33
+    - nslsii.areadetector
+    - nslsii.areadetector.xspress3
     - nslsii.common
     - nslsii.common.ipynb
     - nslsii.common.ipynb.animation
@@ -54,11 +64,17 @@ test:
     - nslsii.common.ipynb.logutils
     - nslsii.common.ipynb.nbviewer
     - nslsii.detectors
+    - nslsii.detectors.QEPro
+    - nslsii.detectors.maia
     - nslsii.detectors.trigger_mixins
     - nslsii.detectors.utils
+    - nslsii.detectors.webcam
     - nslsii.detectors.xspress3
     - nslsii.detectors.zebra
     - nslsii.devices
+    - nslsii.epics_utils
+    - nslsii.iocs
+    - nslsii.iocs.caproto_saver
     # The following error happened for Win/Py312:
     #   AttributeError: module 'multiprocessing.connection' has no attribute 'CHALLENGE'. Did you mean: '_CHALLENGE'?
     # Excluding the test for that platform/Python version for now.
@@ -66,19 +82,32 @@ test:
     # Uncomment the next line once https://github.com/NSLS-II/nslsii/issues/129
     # is resolved.
     # - nslsii.iocs.thermo_sim
+    - nslsii.iocs.utils
+    - nslsii.kafka_utils
+    - nslsii.md_dict
+    - nslsii.motors.delta_tau
+    - nslsii.ophyd_async
+    - nslsii.ophyd_async.providers
+    - nslsii.plans
+    - nslsii.plans.maia
+    - nslsii.sync_experiment
+    - nslsii.sync_experiment.
+    - nslsii.sync_experiment.sync_experiment
     - nslsii.temperature_controllers
     - nslsii.transforms
+  commands:
+    - sync-experiment --help
+    - what-is-ioc --help
+    - axis-saver-ioc --help
 
 about:
   home: https://github.com/NSLS-II/nslsii
+  summary: Tools for data collection and analysis at NSLS-II
   license: BSD-3-Clause
   license_file: LICENSE
-  summary: Repository of tools used for both data collection and analysis at NSLS-II.
 
 extra:
   recipe-maintainers:
     - gwbischof
     - mrakitin
-    - jklynch
-    - kbeeperez
     - conda-forge/event-model
