@@ -46,6 +46,7 @@ requirements:
     - psutil
     - pycryptodome
     - pyolog
+    - recordwhat
     - redis-py
     - redis-json-dict
     - requests
