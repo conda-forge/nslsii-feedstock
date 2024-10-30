@@ -7,7 +7,7 @@ Home: https://github.com/NSLS-II/nslsii
 
 Package license: BSD-3-Clause
 
-Summary: Repository of tools used for both data collection and analysis at NSLS-II.
+Summary: Tools for data collection and analysis at NSLS-II
 
 Current build status
 ====================
@@ -66,13 +66,6 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13562&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nslsii-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.11.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64_python3.12.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13562&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nslsii-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -213,7 +206,5 @@ Feedstock Maintainers
 
 * [@conda-forge/event-model](https://github.com/orgs/conda-forge/teams/event-model/)
 * [@gwbischof](https://github.com/gwbischof/)
-* [@jklynch](https://github.com/jklynch/)
-* [@kbeeperez](https://github.com/kbeeperez/)
 * [@mrakitin](https://github.com/mrakitin/)
 
