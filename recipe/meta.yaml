@@ -16,7 +16,7 @@ build:
     - axis-saver-ioc = nslsii.iocs.caproto_saver:start_axis_ioc
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
-  skip: true  # [py<37 or osx or (py312 and win)]
+  skip: true  # [py<37 or osx or (py==312 and win)]
 
 requirements:
   host:
