@@ -1,5 +1,5 @@
 {% set name = "nslsii" %}
-{% set version = "0.10.6" %}
+{% set version = "0.10.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/nslsii-{{ version }}.tar.gz
-  sha256: 017195535d5c30dd160319b2fd6e6ebb6c100ff82be8ec15e502432312518c68
+  sha256: ff580b4f58140ca7df5600b5ff489b87048b102931cfa242956eedfa89a39131
 
 build:
   entry_points:
@@ -36,9 +36,9 @@ requirements:
     - ipywidgets
     - ldap3
     - matplotlib-base
-    - msgpack-python >=1.0.0
     - msgpack-numpy
-    - numpy <2.0
+    - msgpack-python >=1.0.0
+    - numpy
     - opencv
     - ophyd
     # - ophyd-async
@@ -48,8 +48,8 @@ requirements:
     - pycryptodome
     - pyolog
     - recordwhat
-    - redis-py
     - redis-json-dict
+    - redis-py
     - requests
     - setuptools
     - shortuuid
