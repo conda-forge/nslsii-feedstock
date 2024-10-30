@@ -92,7 +92,6 @@ test:
     - nslsii.plans
     - nslsii.plans.maia
     - nslsii.sync_experiment
-    - nslsii.sync_experiment.
     - nslsii.sync_experiment.sync_experiment
     - nslsii.temperature_controllers
     - nslsii.transforms
