@@ -112,4 +112,5 @@ extra:
   recipe-maintainers:
     - gwbischof
     - mrakitin
+    - jennmald
     - conda-forge/event-model
