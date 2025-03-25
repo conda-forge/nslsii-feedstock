@@ -1,5 +1,5 @@
 {% set name = "nslsii" %}
-{% set version = "0.10.7" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/nslsii-{{ version }}.tar.gz
-  sha256: ff580b4f58140ca7df5600b5ff489b87048b102931cfa242956eedfa89a39131
+  sha256: 392b3e81f42943f77fce069450d7766472faa4093582af38ff22a2a1b48ed3a0
 
 build:
   entry_points:
@@ -112,4 +112,5 @@ extra:
   recipe-maintainers:
     - gwbischof
     - mrakitin
+    - jennmald
     - conda-forge/event-model
