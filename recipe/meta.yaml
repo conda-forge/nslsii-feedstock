@@ -15,7 +15,7 @@ build:
     - what-is-ioc = nslsii.epics_utils:main
     - axis-saver-ioc = nslsii.iocs.caproto_saver:start_axis_ioc
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
   skip: true  # [py<37 or osx or (py==312 and win)]
 
 requirements:
