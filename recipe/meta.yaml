@@ -1,5 +1,5 @@
 {% set name = "nslsii" %}
-{% set version = "0.11.0" %}
+{% set version = "0.11.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/nslsii-{{ version }}.tar.gz
-  sha256: 392b3e81f42943f77fce069450d7766472faa4093582af38ff22a2a1b48ed3a0
+  sha256: ebff36b1a19b283a5563809a485c93104236be33875156d00acff3b2ac7f8d8c
 
 build:
   entry_points:
@@ -15,7 +15,7 @@ build:
     - what-is-ioc = nslsii.epics_utils:main
     - axis-saver-ioc = nslsii.iocs.caproto_saver:start_axis_ioc
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
   skip: true  # [py<37 or osx or (py==312 and win)]
 
 requirements:
