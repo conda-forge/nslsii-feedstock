@@ -41,7 +41,6 @@ requirements:
     - numpy
     - opencv
     - ophyd
-    # - ophyd-async
     - packaging
     - pillow
     - psutil
