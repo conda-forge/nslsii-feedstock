@@ -55,6 +55,8 @@ requirements:
     - shortuuid
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - nslsii
     - nslsii.ad33
