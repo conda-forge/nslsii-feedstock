@@ -1,6 +1,6 @@
 {% set name = "nslsii" %}
 {% set version = "0.11.2" %}
-{% set python_min = "3.11" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
