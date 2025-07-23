@@ -26,7 +26,6 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - python {{ python_min }}
     - appdirs
     - bluesky >=1.8.1
     - bluesky-kafka >=0.8.0
