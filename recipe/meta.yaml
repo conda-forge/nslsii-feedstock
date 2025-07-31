@@ -1,5 +1,6 @@
 {% set name = "nslsii" %}
 {% set version = "0.11.2" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -15,18 +16,18 @@ build:
     - what-is-ioc = nslsii.epics_utils:main
     - axis-saver-ioc = nslsii.iocs.caproto_saver:start_axis_ioc
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
-  skip: true  # [py<310 or osx or (py==312 and win)]
+  number: 1
+  noarch: python
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python
+    - python >={{ python_min }}
     - appdirs
-    - bluesky >=1.8.1
+    - bluesky-base >=1.8.1
     - bluesky-kafka >=0.8.0
     - caproto
     - databroker >=2.0.0b59
@@ -54,6 +55,8 @@ requirements:
     - shortuuid
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - nslsii
     - nslsii.ad33
