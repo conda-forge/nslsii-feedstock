@@ -84,7 +84,7 @@ test:
     #   AttributeError: module 'multiprocessing.connection' has no attribute 'CHALLENGE'. Did you mean: '_CHALLENGE'?
     # Excluding the test for that platform/Python version for now.
     - nslsii.iocs.eps_two_state_ioc_sim  # [not (win and py==312)]
-    # Uncomment the next line once https://github.com/NSLS-II/nslsii/issues/129
+    # Uncomment the next line once https://github.com/NSLS2/nslsii/issues/129
     # is resolved.
     # - nslsii.iocs.thermo_sim
     - nslsii.iocs.utils
@@ -105,7 +105,7 @@ test:
     - axis-saver-ioc --help
 
 about:
-  home: https://github.com/NSLS-II/nslsii
+  home: https://github.com/NSLS2/nslsii
   summary: Tools for data collection and analysis at NSLS-II
   license: BSD-3-Clause
   license_file: LICENSE
