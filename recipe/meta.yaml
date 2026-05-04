@@ -1,5 +1,5 @@
 {% set name = "nslsii" %}
-{% set version = "0.11.8" %}
+{% set version = "0.11.9" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/nslsii-{{ version }}.tar.gz
-  sha256: f9f9af73546ad2f58658007cda35286d02b59b5d7db187deed0a7e01af947d20
+  sha256: 8b703b7e0d51b595ec5498016c1c7014e97231320d8362c69718a82061b3ab59
 
 build:
   entry_points:
@@ -84,12 +84,11 @@ test:
     #   AttributeError: module 'multiprocessing.connection' has no attribute 'CHALLENGE'. Did you mean: '_CHALLENGE'?
     # Excluding the test for that platform/Python version for now.
     - nslsii.iocs.eps_two_state_ioc_sim  # [not (win and py==312)]
-    # Uncomment the next line once https://github.com/NSLS-II/nslsii/issues/129
+    # Uncomment the next line once https://github.com/NSLS2/nslsii/issues/129
     # is resolved.
     # - nslsii.iocs.thermo_sim
     - nslsii.iocs.utils
     - nslsii.kafka_utils
-    - nslsii.md_dict
     - nslsii.motors.delta_tau
     # - nslsii.ophyd_async
     # - nslsii.ophyd_async.providers
@@ -105,7 +104,7 @@ test:
     - axis-saver-ioc --help
 
 about:
-  home: https://github.com/NSLS-II/nslsii
+  home: https://github.com/NSLS2/nslsii
   summary: Tools for data collection and analysis at NSLS-II
   license: BSD-3-Clause
   license_file: LICENSE
