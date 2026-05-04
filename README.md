@@ -3,7 +3,7 @@ About nslsii-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nslsii-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/NSLS-II/nslsii
+Home: https://github.com/NSLS2/nslsii
 
 Package license: BSD-3-Clause
 
@@ -13,11 +13,10 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13562&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/nslsii-feedstock?branchName=main">
-      </a>
+      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
     </td>
   </tr>
 </table>
@@ -146,5 +145,7 @@ Feedstock Maintainers
 * [@conda-forge/event-model](https://github.com/orgs/conda-forge/teams/event-model/)
 * [@gwbischof](https://github.com/gwbischof/)
 * [@jennmald](https://github.com/jennmald/)
+* [@jwlodek](https://github.com/jwlodek/)
 * [@mrakitin](https://github.com/mrakitin/)
+* [@thopkins32](https://github.com/thopkins32/)
 
