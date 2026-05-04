@@ -112,6 +112,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - thopkins32
     - jwlodek
     - gwbischof
     - mrakitin
