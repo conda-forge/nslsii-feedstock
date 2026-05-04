@@ -89,7 +89,6 @@ test:
     # - nslsii.iocs.thermo_sim
     - nslsii.iocs.utils
     - nslsii.kafka_utils
-    - nslsii.md_dict
     - nslsii.motors.delta_tau
     # - nslsii.ophyd_async
     # - nslsii.ophyd_async.providers
