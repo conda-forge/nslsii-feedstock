@@ -1,5 +1,5 @@
 {% set name = "nslsii" %}
-{% set version = "0.12.0" %}
+{% set version = "0.12.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/nslsii-{{ version }}.tar.gz
-  sha256: b8f2293e4f5bdfa414edd80f9b0757d0732333d16326c53699f9407af8bb647d
+  sha256: 6d62361d530e9a36e87c469f7b23ec11caba42dcd4f09c876d6fd91ce2d9ceb7
 
 build:
   entry_points:
@@ -42,7 +42,7 @@ requirements:
     - numpy
     - opencv
     - ophyd
-    - ophyd-async >=0.21.3
+    - ophyd-async >=0.21.4
     - packaging
     - pillow
     - psutil
