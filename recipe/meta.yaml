@@ -1,5 +1,5 @@
 {% set name = "nslsii" %}
-{% set version = "0.13.0" %}
+{% set version = "0.13.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/nslsii-{{ version }}.tar.gz
-  sha256: b66d232785c8b603f279eddc6812b4235d13028e02f71c201f61eb05b2acf820
+  sha256: c9926ea7ad3e440d58df473ae07d91621a61a4c6c506ba2a6ca5a9691d14e853
 
 build:
   entry_points:
